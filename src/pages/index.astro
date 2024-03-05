@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<article>
+		<header>
+			<img src="https://unavatar.io/jmilei/" alt="Perfil_image">
+			<h1>Agustin Vignolo Elal</h1>
+		</header>
+		<section>
+			<p>Un joven programador ansioso por entrar en el ambito laboral y coseguir mas experiencia como programador. <strong>Con mas de 2 años prendiendo me cosidero apto para entrar en el mundo laboral y poner a prube mi habilidades aprendidas</strong></p>
+		</section>
+	</article>
+	<article>
+		<h2>
+			Los lenguajes que sé
+		</h2>
+		
+			<details>
+				<summary><h5 class="">HMTL</h5></summary>Como primer lenguaje de programación que aprendí cuando me incié en dicho ambito. Me encargué de aprenderlo en lo mejor posible. <strong class="card-focus-text">Ademas, poseo conocimientos basicos en HTMX</strong>
+			</details>
+			<details>
+				<summary><h5>CSS</h5></summary>
+			</details>
+			<details>
+				<summary><h5>Javascript</h5></summary>
+			</details>
+	</article>
+	<article>
+		<h2>¿Donde eh estudiado?</h2>
+		<p>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
+		</p>
+	</article>
+	<article>
+		<h2>Por que contratarme?</h2>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, voluptate repellendus deserunt earum et, cumque dicta recusandae facere aspernatur tempore corrupti unde quasi. Harum ipsum eveniet quae magnam odio esse.
+		</p>
+	</article>
+	<article>
+		<h2>Proyectos Realizados</h2>
+		<section class="project_list">
+			<div class="projects_done"></div>
+			<div class="projects_done"></div>
+			<div class="projects_done"></div>
+			<div class="projects_done"></div>
+			<div class="projects_done"></div>
+			<div class="projects_done"></div>
+		</section>
+	</article>
+</Layout>
+
+<style>
+	article{
+		margin:auto;
+		width:400px;
+		color:white;
+	}
+	img{
+		width: 65px;
+		height:65px;
+		border-radius: 999px;
+		display:inline;
+		margin-right: 20px;
+	}
+	header{
+		display:flex;
+		color:white;
+		justify-content: space-between;
+		margin-top:20px;
+		border-bottom: 1px solid #777;
+		width:400px;
+	}
+	h2{
+		padding:0px 10px 10px 0px;
+		border-bottom:1px solid #777;
+	}
+	strong{
+		color:#09f;
+	}
+	.card-focus-text{
+		color: #09f;
+	}
+	details{
+		transition-duration: 0.5s;
+		margin:2.5px 0px 2.5px 0px ;
+		cursor:pointer;
+
+		&:hover{
+			background:#9992;
+		}
+	}
+	details[open]{
+		background:#9992;
+		border-radius:5px;
+		padding:5px;
+
+	}
+    h5{
+			border:0;
+			margin-top:10px;
+			display:inline;
+		}
+	
+	.project_list{
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap:5px;
+	}
+	.projects_done{
+			display:inline-block;
+			height:100px;
+			background:#333;
+			border-radius:5px;
+			cursor:pointer;
+			&:hover{
+				background:#888;
+			}
+	}
+
+</style>
